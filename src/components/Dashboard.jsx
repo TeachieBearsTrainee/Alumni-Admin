@@ -17,7 +17,6 @@ const Dashboard = () => {
 
   const [isActive, setIsActive] = useState(false)
 
-
   return (
     <Tabs className=' flex bg-[#ededed]'>
       <div className=' w-[20%] h-dvh bg-[#262D34] flex flex-col text-white justify-between  py-[4%]'>

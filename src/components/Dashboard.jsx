@@ -15,7 +15,35 @@ import Master from './Master';
 
 const Dashboard = () => {
 
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState()
+
+  const arr = [
+    {
+      isa: "manageAlumini",
+      logo: <PiSealCheck />,
+      name: "Manage Alumini",
+    },
+    {
+      isa: "manageCR",
+      logo: <MdManageAccounts />,
+      name: "Manage CR",
+    },
+    {
+      isa: "managePosts",
+      logo: <BsFillPostcardHeartFill />,
+      name: "Manage posts",
+    },
+    {
+      isa: "manageSub",
+      logo: <MdOutlineSubscriptions />,
+      name: "Manage Subscription",
+    },
+    {
+      isa: "master",
+      logo: <IoGlobeOutline />,
+      name: "Master",
+    },
+  ]
 
   return (
     <Tabs className=' flex bg-[#ededed]'>
@@ -25,26 +53,14 @@ const Dashboard = () => {
             <h1>Dashboard</h1>
             <MdOutlineDashboardCustomize />
           </div>
-          <Tab onClick={() => setIsActive("manageAlumini")} className={`py-[6%] pl-[15%] flex  items-center gap-3 border-b-1  border-b-white ${isActive == "manageAlumini" ? "text-[#F88C2E]  bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] border-r-orange-500 border-r-6" : ""} `}>
-            <PiSealCheck />
-            <h1>Manage Alumini</h1>
-          </Tab>
-          <Tab onClick={() => setIsActive("manageAlumini")} className={`py-[6%] pl-[15%] flex  items-center gap-3 border-b-1  border-b-white ${isActive == "manageAlumini" ? "text-[#F88C2E]  bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] border-r-orange-500 border-r-6" : ""} `}>
-            <MdManageAccounts />
-            <h1>Manage CR</h1>
-          </Tab>
-          <Tab className='py-[6%] pl-[15%] flex items-center gap-3 border-b-1 pb-2.5 border-b-white focus:text-[#F88C2E]   focus:bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] focus:border-r-orange-500 focus:border-r-6'>
-            <BsFillPostcardHeartFill />
-            <h1>Manage Posts</h1>
-          </Tab>
-          <Tab className='py-[6%] pl-[15%] flex items-center gap-3 border-b-1 pb-2.5 border-b-white focus:text-[#F88C2E]   focus:bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] focus:border-r-orange-500 focus:border-r-6'>
-            <MdOutlineSubscriptions />
-            <h1>Manage Subscription</h1>
-          </Tab>
-          <Tab className='py-[6%] pl-[15%] flex items-center gap-3 border-b-1 pb-2.5 border-b-white focus:text-[#F88C2E]   focus:bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] focus:border-r-orange-500 focus:border-r-6'>
-            <IoGlobeOutline />
-            <h1>Master</h1>
-          </Tab>
+
+          {arr.map((newArr, key) => (
+            <Tab key={key} onClick={() => setIsActive(newArr.isa)} className={`py-[6%] pl-[15%] flex  items-center gap-3 border-b-1  border-b-white ${isActive == (newArr.isa) ? "text-[#F88C2E]  bg-gradient-to-r from-[#262D34] from-40% to-[#4f4843] border-r-orange-500 border-r-6" : ""} `}>
+              {newArr.logo}
+              <h1>{newArr.name}</h1>
+            </Tab>
+          ))}
+
         </TabList>
         <div className=' flex items-center  gap-3 self-center'>
           <IoLogOutSharp className=' text-orange-400 rounded-[50%] bg-[#b7b5b53d] p-4 w-[120%] h-[120%]' />

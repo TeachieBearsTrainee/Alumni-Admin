@@ -26,12 +26,30 @@ function ManageAlumini() {
                     <h1 className='  text-5xl'>06</h1>
                 </div>
             </div>
-            <div className='shadow-md rounded-2xl bg-white w-full p-6 h-[40%] mt-3.5'>
-                <div className=' flex justify-between'>
+            <div className='w-full flex gap-5'>
+            <div className='shadow-md rounded-2xl bg-white w-[64%] p-6 h-auto mt-3.5'>
+                <div className=' flex justify-between '>
                     <h1>Response Pending</h1>
                     <button className=' text-orange-400 h-fit'>View all</button>
                 </div>
+                <div className=' flex justify-between border border-gray-400 mt-5 p-4 items-center rounded-2xl '>
+                    <div className='h-auto flex gap-4 '> 
+                        <img src="/images/userlogo.png" alt="" />
+                        <div>
+                            <h3>Rajnish Manda</h3>
+                            <p>Design all the screen</p>
+                        </div>
+                    </div>
 
+                    <div className='flex gap-2'>
+                        <button>Accept</button>
+                        <button>Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div className='shadow-md rounded-2xl bg-white w-[36%] p-6 h-auto mt-3.5'>
+                <img src="/images/gaugesample.png" alt="" />
+            </div>
             </div>
         </div>
     )

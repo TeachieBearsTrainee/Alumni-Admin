@@ -46,8 +46,8 @@ const Dashboard = () => {
   ]
 
   return (
-    <Tabs className=' flex bg-[#ededed]'>
-      <div className=' w-[20%] h-dvh bg-[#262D34] flex flex-col text-white justify-between  py-[4%]'>
+    <Tabs className=' flex bg-[#ededed] '>
+      <div className=' w-[20%] h-dvh bg-[#262D34] flex flex-col text-white justify-between  py-[4%] '>
         <TabList className=' mt-[15%] flex flex-col  text-xl font-light cursor-pointer  '>
           <div className=' flex items-center self-center gap-7 pb-4.5 '>
             <h1>Dashboard</h1>

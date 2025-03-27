@@ -8,7 +8,7 @@ const ResponsePending = (props) => {
         <img src="/images/userlogo.png" alt="" />
         <div>
           <h4>{props.username}</h4>
-          <p className="text-sm">{props.bio}</p>
+          <p className="text-sm text-gray-400">{props.bio}</p>
         </div>
       </div>
 
